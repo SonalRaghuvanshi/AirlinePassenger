@@ -12,20 +12,12 @@ def predict(model, input_df):
 
 def run():
 
-    from PIL import Image
-    image = Image.open('logo.jpg')
-    image_hospital = Image.open('logo2.jpg')
-
-    st.image(image,use_column_width=False)
-
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?",
     ("Online", "Batch"))
 
     st.sidebar.info('This app is created to predict Airline Passenger Satisfaction')
     
-    st.sidebar.image(image_hospital)
-
     st.title("Airline Passenger Satisfaction Prediction App")
 
     if add_selectbox == 'Online':
